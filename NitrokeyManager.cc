@@ -1056,6 +1056,7 @@ using nitrokey::misc::strcpyT;
       misc::execute_password_command<stick20::SetUnencryptedVolumeReadOnlyAdmin>(device, admin_pin);
     }
 
+    [[deprecated("set_unencrypted_read_only is deprecated. Use set_unencrypted_read_only_admin instead.")]]
     void NitrokeyManager::set_unencrypted_read_only(const char *user_pin) {
         //until v0.48 (incl. v0.50 and v0.51) User PIN was sufficient
         LOG("set_unencrypted_read_only is deprecated. Use set_unencrypted_read_only_admin instead.",
@@ -1078,6 +1079,7 @@ using nitrokey::misc::strcpyT;
       misc::execute_password_command<stick20::SetUnencryptedVolumeReadWriteAdmin>(device, admin_pin);
     }
 
+    [[deprecated("set_unencrypted_read_write is deprecated. Use set_unencrypted_read_write_admin instead")]]
     void NitrokeyManager::set_unencrypted_read_write(const char *user_pin) {
         //until v0.48 (incl. v0.50 and v0.51) User PIN was sufficient
       LOG("set_unencrypted_read_write is deprecated. Use set_unencrypted_read_write_admin instead.",
